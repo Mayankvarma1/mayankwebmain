@@ -1,0 +1,323 @@
+.header {
+  height: 80px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  position: fixed;
+  width: calc(100% - 100px);
+  top: 0;
+  z-index: 2;
+}
+.headerLeft {
+  font-size: 36px;
+  width: 50%;
+  text-align: left;
+  font-family: "Kaushan Script", cursive;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  display: none;
+}
+
+.headerRightDesk {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  text-align: right;
+  align-items: center;
+}
+.headerRightMob {
+  display: none;
+}
+
+a {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+
+li {
+  list-style: none;
+}
+
+a li {
+  position: relative;
+  z-index: 2;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  color: inherit;
+  transition: all 0.35s;
+}
+
+a:hover {
+  color: black;
+}
+
+a:hover:after {
+  width: 100%;
+}
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50px;
+  background-color: #434343;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+}
+.dropdown_content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown_content {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.35s all;
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+/* .dropdown:hover .dropbtn {
+  background-color: transparent;
+} */
+
+footer {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  height: 40px;
+
+  width: 100%;
+
+  padding-top: 8px;
+
+  padding-bottom: 20px;
+
+  color: #fff;
+
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+
+  font-weight: 500;
+
+  text-transform: capitalize;
+
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+
+  margin: 10px auto;
+
+  line-height: 28px;
+
+  font-size: 14px;
+
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 !important;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+
+  color: #fff;
+
+  padding: 5px;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+
+  width: 20px;
+
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #000;
+
+  width: 100vw;
+
+  padding: 20px;
+
+  padding-bottom: 40px;
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  float: left;
+
+  font-size: 14px;
+
+  word-spacing: 2px;
+}
+
+.footer-bottom p a {
+  color: #ccc;
+
+  font-size: 16px;
+
+  text-decoration: none;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+}
+
+.footer-menu {
+  float: right;
+}
+
+.footer-menu ul {
+  display: flex;
+}
+
+.footer-menu ul li {
+  padding-right: 10px;
+
+  display: block;
+}
+
+.footer-menu ul li a {
+  color: #cfd2d6;
+
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  color: #27bcda;
+}
+
+@media (max-width: 500px) {
+  .footer-bottom p {
+    float: none;
+  }
+
+  .footer-menu ul {
+    display: flex;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: block;
+    height: 60px;
+    width: 100%;
+    padding: 0;
+  }
+  .headerRightMob {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  }
+  .headerHidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .headerRightDesk {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
+  .headerLeft {
+    width: 100%;
+  }
+  .name {
+    padding-left: 10px;
+  }
+  .icon {
+    padding-right: 10px;
+  }
+}

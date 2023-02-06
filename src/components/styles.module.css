@@ -1,0 +1,235 @@
+.main {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.container {
+  color: #424242;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.image_Styles {
+  border-radius: 16px;
+}
+
+.animation {
+  color: white;
+  height: 50px;
+  overflow: hidden;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 15s infinite;
+}
+
+.first div {
+  background-color: #263838;
+}
+.second div {
+  background-color: #3a6666;
+}
+.third div {
+  background-color: #599b9b;
+}
+.forth div {
+  background-color: #6d8f8f;
+}
+
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  17% {
+    margin-top: -5.62rem;
+  }
+  34% {
+    margin-top: -11.24rem;
+  }
+  51% {
+    margin-top: -17.4rem;
+  }
+  68% {
+    margin-top: -11.24rem;
+  }
+  85% {
+    margin-top: -5.62rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 0 100px;
+}
+
+.element {
+  padding: 20px;
+  font-weight: 400;
+  font-size: 1.76rem;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.image_box {
+  width: 20em;
+  position: relative;
+}
+.image_box:after {
+  content: "";
+  width: 30%;
+  height: 2.5px;
+  background: #424242;
+  position: absolute;
+  top: -25px;
+  left: -50px;
+}
+.image_box:before {
+  content: "";
+  width: 1.5px;
+  height: 50%;
+  background: #424242;
+  position: absolute;
+  top: -35px;
+  left: -40px;
+}
+
+.right_image_box {
+  width: 20em;
+  height: 13em;
+  position: relative;
+}
+.right_image_box:after {
+  content: "";
+  width: 30%;
+  height: 1.5px;
+  background: #424242;
+  position: absolute;
+  bottom: 45px;
+  right: -50px;
+}
+.right_image_box:before {
+  content: "";
+  width: 2.5px;
+  height: 50%;
+  background: #424242;
+  position: absolute;
+  bottom: 35px;
+  right: -40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: block;
+  }
+  .image_Styles {
+    max-width: 100%;
+  }
+  .introduction {
+    padding: 0;
+  }
+  .element {
+    padding: 25px;
+    font-size: 18px;
+  }
+  .image_box,
+  .right_image_box {
+    width: auto;
+  }
+  .right_image_box:after {
+    width: 30%;
+    height: 1.5px;
+    bottom: -11px;
+    right: -12px;
+  }
+  .right_image_box:before {
+    width: 1.5px;
+    height: 40%;
+    bottom: -11px;
+    right: -12px;
+  }
+  .image_box:after {
+    width: 30%;
+    height: 0.5px;
+    top: -14px;
+    left: -12px;
+  }
+  .image_box:before {
+    width: 0.5px;
+    height: 50%;
+    top: -14px;
+    left: -12px;
+  }
+  .container {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 16px;
+    padding-left: 11px;
+    /* align-items: baseline; */
+  }
+  .greetings{
+    margin-top: -23px !important;
+    margin-bottom: 0 !important;
+    font-weight: 600 !important;
+  }
+  .animation {
+    color: white;
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+  @keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+    17% {
+      margin-top: -51px;
+    }
+    34% {
+      margin-top: -102px;
+    }
+    51% {
+      margin-top: -153px;
+    }
+    68% {
+      margin-top: -102px;
+    }
+    85% {
+      margin-top: -51px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+}
