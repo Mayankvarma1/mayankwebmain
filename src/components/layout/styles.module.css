@@ -320,4 +320,9 @@ footer {
   .icon {
     padding-right: 10px;
   }
+  .dropdown_content {
+    z-index: 3;
+    top: 10px;
+    left: 60px;
+  }
 }
